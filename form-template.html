@@ -62,7 +62,7 @@
          }
 
          fieldset{
-            width: 400px;
+            width: 350px;
             border: 1px solid #999;
             border-radius: 20px;
             clear: both;
@@ -71,24 +71,32 @@
             background-color:rgba(129, 187, 201,.2);
          }
          .boxGroups {
+            display: block;
             position: relative;
             left: -20px;
-            width: 400px;
-            border: none;
-            background-color:rgba(0,0,0,0);
-            margin: auto;
+            margin-top: 0;
+            margin-bottom: 0;
             padding-top: 0;
-            padding-bottom: 5px;
+            padding-bottom: 0;
+            background-color:rgba(0, 0, 0,0);
+            border: none;
+
          }
          .boxes{
-            position: relative;
-            left: -25px;
-            top: 10px;
+            display: block;
+            margin: 11px 0;
+            width: auto;
+            padding-top: 0px;
          }
-         .boxGroups span {
-            position: relative;
-            left: -75px;
-            top: 10px
+         .cLabels {
+            display: block;
+            margin: 5px 0 5px 0;
+         }
+         .checkAndRadioContainer {
+            display: inline-block;
+            vertical-align: top;
+            margin: 7px 5px 0px 5px;
+            padding: 5px 5px 5px 0;
          }
 
       </style>
@@ -131,23 +139,31 @@
                   <!-- CHECKBOXES -->
                   <fieldset class="boxGroups">
                   <label class="field">Menu Choice:</label>
-                  <label for="Starter"> </label>
-                  <input type="checkbox" value="Starter" id="Starter" class="boxes"><span>Starter</span>
-                  <label for="Main"> </label>
-                  <input type="checkbox" value="Main" id="Main" class="boxes"><span>Main</span>
-                  <label for="Dessert"> </label>
-                  <input type="checkbox" value="Dessert" id="Dessert" class="boxes"><span>Dessert</span>
+                  <Div class="checkAndRadioContainer">
+                     <label for="Starter" class="cLabels">Starter</label>
+                     <label for="Dessert" class="cLabels">Dessert</label>
+                     <label for="Main" class="cLabels">Main</label>
+                  </Div>
+                  <Div class="checkAndRadioContainer">
+                     <input type="checkbox" value="Main" id="Main" class="boxes">
+                     <input type="checkbox" value="Starter" id="Starter" class="boxes">
+                     <input type="checkbox" value="Dessert" id="Dessert" class="boxes">
+                  </Div>
                   </fieldset>
 
                   <!-- RADIOBUTTONS -->
                   <fieldset class="boxGroups">
                   <label class="field">Gender:</label>
-                  <label for="male"> </label>
-                  <input type="radio" name="gender" value="male" class="boxes" id="male"><span>Male</span>
-                  <label for="female"> </label>
-                  <input type="radio" name="gender" value="female" class="boxes" id="female"><span>Female</span>
-                  <label for="other"> </label>
-                  <input type="radio" name="gender" value="other" class="boxes" id="other"><span>Other</span>
+                  <div class="checkAndRadioContainer">
+                     <label for="male" class="cLabels">Male</label>
+                     <label for="female" class="cLabels">Female</label>
+                     <label for="other" class="cLabels">Other</label>
+                  </div>
+                  <div class="checkAndRadioContainer">
+                     <input type="radio" name="gender" value="male" class="boxes" id="male">
+                     <input type="radio" name="gender" value="female" class="boxes" id="female">
+                     <input type="radio" name="gender" value="other" class="boxes" id="other">
+                  </div>
                   </fieldset>
 
                   <!-- SELECT BOX WITH OPTION GROUPS -->
